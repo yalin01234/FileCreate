@@ -1,0 +1,32 @@
+package Files;
+
+import java.io.IOException;
+
+public class FileIO {
+
+	public static void main(String[] args) {
+			
+		try {
+
+			System.out.println("Data="  +FileUtile.readFile("C:\\temp\\input.txt"));
+			
+			String data =FileUtile.readFile("C:\\temp\\input.txt");
+			String data1="C:\\\\temp\\\\output.txt";
+		    FileUtile.writeFile(data1, data);
+		    
+		    System.out.println("Exsit ?="  +FileUtile.exsits("C:\\temp\\input.txt"));
+		    System.out.println("Create ?=" +FileUtile.createDirectoies("C:\\temp\\a\\b",true));
+		    System.out.println("Create File ? =" +FileUtile.createFile("C:\\temp\\a\\b\\yalin.txt"));
+			
+	
+		}catch (IOException e){
+			e.printStackTrace();
+			
+				
+			}
+			
+		}
+
+	
+
+}
